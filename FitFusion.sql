@@ -40,7 +40,10 @@ exerciseID int not null,
 foreign key (exerciseID) references exercises(exerciseID),
 
 workoutGoalID int,
-foreign key (workoutGoalID) references Workout(WorkoutGoalID)
+foreign key (workoutGoalID) references Workout(WorkoutGoalID),
+
+-- Adding a status column to this table.
+userStatus varchar(20) -- Completed or incomplete
 );
 
 /* Based on your workout goal, this table serves to retrieve all the exercises that help achieve said goal. This also will be pre-populated. */
